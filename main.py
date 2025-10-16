@@ -20,10 +20,8 @@ class MyBot(commands.Bot):
             if filename.endswith(".py") and not filename.startswith("_"):
                 await self.load_extension(f"cogs.{filename[:-3]}")
                 print(f"Loaded cog: {filename}")
-
-        guild = discord.Object(id=SERVER_ID)
-        self.tree.copy_global_to(guild=guild)
-        await self.tree.sync(guild=guild)
+        
+        await self.tree.sync()
         print(f"Slash commands synced to guild {SERVER_ID}.")
 
     async def on_ready(self):
