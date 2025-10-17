@@ -7,6 +7,7 @@ import os
 class Utils(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
+        self.version = '1.0'
 
     @app_commands.command(name="ping", description="Check bot latency.")
     async def ping(self, interaction: discord.Interaction):
@@ -41,5 +42,11 @@ class Utils(commands.Cog):
         vc.stop()
         await interaction.response.send_message("Playback stopped.")
 
+
 async def setup(bot):
-    await bot.add_cog(Utils(bot))
+    cog = Utils(bot)
+    await bot.add_cog(cog)
+    embed = discord.Embed(title=f'Utility cog Successfully loaded', description=f'Version: {cog.version}\nCommands: {cog.get_app_commands()}')
+    update = bot.get_channel(1428731822442811403)
+    if update:
+        await update.send(embed=embed)

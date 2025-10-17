@@ -3,6 +3,7 @@ import discord
 import asyncio
 from discord.ext import commands
 from dotenv import load_dotenv
+import datetime
 
 load_dotenv()
 
@@ -19,7 +20,7 @@ class MyBot(commands.Bot):
         for filename in os.listdir("./cogs"):
             if filename.endswith(".py") and not filename.startswith("_"):
                 await self.load_extension(f"cogs.{filename[:-3]}")
-                print(f"Loaded cog: {filename}")
+                print(f"Loaded cog: {filename} ")
         
         await self.tree.sync()
         print(f"Slash commands synced to guild {SERVER_ID}.")
@@ -29,6 +30,19 @@ class MyBot(commands.Bot):
         print(f"Connected to {len(self.guilds)} guild(s).")
         print("Bot is ready.")
 
+        cog_info = []
+        update_channel = self.get_guild(SERVER_ID).get_channel(1428731822442811403)
+        for name, cog in self.cogs.items():
+                version = getattr(cog, "version", "unknown")  # fallback if not defined
+                cog_info.append(f"**{name}** — v{version}")
+
+        embed = discord.Embed(
+                title="Bot Online!",
+                description="**__Cogs loaded:__**\n" + "\n".join(cog_info),
+                color=discord.Color.green()
+        )
+
+        await update_channel.send(embed=embed)
 
 async def main():
     bot = MyBot()

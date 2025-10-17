@@ -17,9 +17,11 @@ engine = pyttsx3.init()
 engine.setProperty('rate', 150)
 engine.setProperty('volume', 1.0)
 
+
 class LLM(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
+        self.version = '1.0'
 
     @app_commands.command(name="ask", description="Ask a question to the AI.")
     @app_commands.describe(question="Your question")
@@ -42,7 +44,7 @@ class LLM(commands.Cog):
                 max_tokens=512)
             context.append(f"User: {question}")
             context.append(f"AI: {response.choices[0].message['content']}")
-            config[user_id] = context[-10:]
+            config[user_id] = context[-35:]
             with open("cogs/_context_.json", "w") as f:
                 json.dump(config, f, indent=4)
             answer = response.choices[0].message['content'].strip()
@@ -141,7 +143,7 @@ class LLM(commands.Cog):
                 max_tokens=512)
             context.append(f"User: I want to study {subject}. Help me learn about it.")
             context.append(f"AI: {response.choices[0].message['content']}")
-            config[user_id] = context[-10:]
+            config[user_id] = context[-35:]
             with open("cogs/_context_.json", "w") as f:
                 json.dump(config, f, indent=4)
             answer = response.choices[0].message['content'].strip()
@@ -154,7 +156,11 @@ class LLM(commands.Cog):
             await interaction.followup.send(embed=embed, ephemeral=True)
 
 
-async def setup(bot):  
-        await bot.add_cog(LLM(bot))
-        print("LLM Cog Loaded")
 
+async def setup(bot):
+    cog = LLM(bot)
+    await bot.add_cog(cog)
+    embed = discord.Embed(title=f'LLM Cog Successfully loaded', description=f'Version: {cog.version}\nCommands: {cog.get_app_commands()}')
+    update = bot.get_channel(1428731822442811403)
+    if update:
+        await update.send(embed=embed)

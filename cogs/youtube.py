@@ -18,6 +18,7 @@ FFMPEG_OPTIONS = {
 class YouTube(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
+        self.version = '1.0'
 
     @app_commands.command(name="playyt", description="Play audio from YouTube by search or URL.")
     @app_commands.describe(query="Search term or YouTube URL")
@@ -63,5 +64,11 @@ class YouTube(commands.Cog):
             embed = discord.Embed(title="Error", description=f"Could not play the requested audio.\nPlease Report this Error: {str(e)}", color=discord.Color.red())
             await interaction.followup.send(embed=embed, ephemeral=True)
 
+
 async def setup(bot):
-    await bot.add_cog(YouTube(bot))
+    cog = YouTube(bot)
+    await bot.add_cog(cog)
+    embed = discord.Embed(title=f'YT Cog Successfully loaded', description=f'Version: {cog.version}\nCommands: {cog.get_app_commands()}')
+    update = bot.get_channel(1428731822442811403)
+    if update:
+        await update.send(embed=embed)

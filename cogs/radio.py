@@ -8,6 +8,7 @@ import asyncio
 class Radio(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
+        self.version = '1.1'
 
     @app_commands.command(name="playradio", description="Play a radio station by name.")
     async def playradio(self, interaction: discord.Interaction, station_name: str):
@@ -45,5 +46,11 @@ class Radio(commands.Cog):
         except Exception as e:
             await interaction.followup.send(f"Error: {str(e)}", ephemeral=True)
 
+
 async def setup(bot):
-    await bot.add_cog(Radio(bot))
+    cog = Radio(bot)
+    await bot.add_cog(cog)
+    embed = discord.Embed(title=f'Radio Cog Successfully loaded', description=f'Version: {cog.version}\nCommands: {cog.get_app_commands()}')
+    update = bot.get_channel(1428731822442811403)
+    if update:
+        await update.send(embed=embed)
