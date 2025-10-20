@@ -210,3 +210,4 @@ __marimo__/
 _encrypt.py
 cogs/_journals_.json
 cogs/dev.py
+discord.log

@@ -4,6 +4,19 @@ import asyncio
 from discord.ext import commands
 from dotenv import load_dotenv
 import datetime
+import logging
+
+logger = logging.getLogger('discord')
+logger.setLevel(logging.INFO)
+
+handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
+
+formatter = logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s')
+handler.setFormatter(formatter)
+
+console = logging.StreamHandler()
+logger.addHandler(handler)
+logger.addHandler(console)
 
 load_dotenv()
 
@@ -34,7 +47,10 @@ class MyBot(commands.Bot):
         update_channel = self.get_guild(SERVER_ID).get_channel(1428731822442811403)
         for name, cog in self.cogs.items():
                 version = getattr(cog, "version", "unknown")  # fallback if not defined
-                cog_info.append(f"**{name}** — v{version}")
+                cog_info.append(f"**{name}** — v{version} including commands:")
+                for idx, command in enumerate(cog.get_app_commands()):
+                    cog_info.append(f"{idx}. */{command.name}*")
+                
 
         embed = discord.Embed(
                 title="Bot Online!",

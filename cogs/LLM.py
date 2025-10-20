@@ -8,6 +8,8 @@ from dotenv import load_dotenv
 import json
 import pyttsx3
 import uuid
+import asyncio
+#import whisper
 
 load_dotenv()
 HF_TOKEN = os.getenv("HF_TOKEN")

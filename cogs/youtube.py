@@ -138,3 +138,4 @@ async def setup(bot):
     update = bot.get_channel(1428731822442811403)
     if update:
         await update.send(embed=embed)
+
