@@ -75,7 +75,7 @@ class gs(commands.Cog):
         heart = heart.resize((height, height))
 
         total_width = (2*avatar1.width//3 + 2*heart.width//3 + avatar2.width)
-        success = (user1.id + user2.id - 45) % 100
+        success = 1 + (user1.id + user2.id - 45) % 100
         result = Image.new("RGB", (total_width, height), (int(success*255),int(success*255),int(success*255)))
         result.paste(avatar1, (0, 0), avatar1)
         result.paste(avatar2, (2*avatar1.width//3 + 2*heart.width//3, 0), avatar2)
