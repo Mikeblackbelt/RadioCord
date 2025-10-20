@@ -25,7 +25,7 @@ class gs(commands.Cog):
         result.paste(im, (0, 0), mask)
         return result
 
-    @app_commands.command(name='messages', description='Get Guild Top Messages Stats')
+    """@app_commands.command(name='messages', description='Get Guild Top Messages Stats')
     async def stats(self, interaction: discord.Interaction):
         await interaction.response.defer(thinking=True)
         guild = interaction.guild
@@ -33,7 +33,7 @@ class gs(commands.Cog):
 
         for channel in guild.text_channels:
             try:
-                async for message in channel.history(limit=None):
+                async for message in channel.history(limit=1000):
                     if not message.author.bot:
                         senders[message.author] += 1
             except discord.Forbidden:
@@ -52,7 +52,7 @@ class gs(commands.Cog):
             for i, (user, count) in enumerate(top_senders, start=1):
                 embed.add_field(name=f"#{i} {user.display_name}", value=f"{count} messages", inline=False)
 
-        await interaction.followup.send(embed=embed)
+        await interaction.followup.send(embed=embed)"""
 
     @app_commands.command(name='ship', description='ship two users because you are weird')
     @app_commands.describe(user1='user 1', user2='user2')
