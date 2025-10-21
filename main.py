@@ -10,9 +10,11 @@ logger = logging.getLogger('discord')
 logger.setLevel(logging.INFO)
 
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
+commandlog = logging.FileHandler(filename='commands.log', encoding='utf-8',mode='w' )
 
 formatter = logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s')
 handler.setFormatter(formatter)
+commandlog.setFormatter(formatter)
 
 console = logging.StreamHandler()
 logger.addHandler(handler)
@@ -59,11 +61,24 @@ class MyBot(commands.Bot):
         )
 
         await update_channel.send(embed=embed)
+    
+    async def on_app_command_completion(self, interaction, command):
+        msg = f"Slash command run: /{command.name} by {interaction.user} in #{interaction.channel}"
+        print(msg)
+        logging.getLogger('command').info(msg)
+
+    async def on_command(self, ctx):
+        msg = f"Prefix command run: {ctx.command} by {ctx.author} in #{ctx.channel}"
+        print(msg)
+        logging.getLogger('command').info(msg)
+
 
 async def main():
     bot = MyBot()
     async with bot:
         await bot.start(TOKEN)
+
+
 
 if __name__ == "__main__":
     asyncio.run(main())
