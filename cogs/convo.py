@@ -29,6 +29,7 @@ class Convo(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.model = whisper.load_model("medium")
+        self.version = '0.3'
 
     @app_commands.command(name="convo", description="Start a voice convo and detect silence.")
     async def convo(self, interaction: discord.Interaction):
