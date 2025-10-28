@@ -1,0 +1,143 @@
+{attacker} swings a mighty sword at {target}!
+{attacker} throws a fireball at {target}!
+{attacker} shoots an arrow straight at {target}!
+{attacker} smashes a rock into {target}!
+{attacker} casts a lightning bolt on {target}!
+{attacker} punches {target} with super strength!
+{attacker} kicks {target} into the air!
+{attacker} hurls a magic dagger at {target}!
+{attacker} slashes with a spinning attack at {target}!
+{attacker} throws a snowball with perfect aim at {target}!
+{attacker} unleashes a flurry of punches on {target}!
+{attacker} strikes {target} with a giant hammer!
+{attacker} stomps on the ground, causing shockwaves at {target}!
+{attacker} fires a water blast at {target}!
+{attacker} launches a surprise attack on {target}!
+{attacker} conjures a swarm of bees to attack {target}!
+{attacker} smacks {target} with a frying pan!
+{attacker} swings a chainsaw wildly at {target}!
+{attacker} throws a magical potion that explodes near {target}!
+{attacker} uses an ultimate move against {target}!
+{attacker} sneaks up and pokes {target} with a stick!
+{attacker} tosses a banana peel at {target}’s feet!
+{attacker} whacks {target} with a giant rubber chicken!
+{attacker} throws glitter in {target}’s eyes!
+{attacker} blasts {target} with confetti cannons!
+{attacker} tickles {target} mercilessly!
+{attacker} uses a ninja star against {target}!
+{attacker} hurls a pie straight at {target}’s face!
+{attacker} drops a bucket of slime on {target}!
+{attacker} summons a tornado that lifts {target}!
+{attacker} calls in a meteor strike on {target}!
+{attacker} fires a laser beam from their eyes at {target}!
+{attacker} sends a horde of tiny robots to attack {target}!
+{attacker} swings a broom like a battle staff at {target}!
+{attacker} throws a jar of pickles at {target}!
+{attacker} unleashes a sonic scream at {target}!
+{attacker} performs a karate chop on {target}!
+{attacker} spins a hula hoop and knocks {target} over!
+{attacker} launches a jellybean barrage at {target}!
+{attacker} uses a magic trampoline to bounce {target} away!
+{attacker} casts a spell turning {target} into a frog!
+{attacker} shoots spaghetti noodles at {target}!
+{attacker} slingshots water balloons at {target}!
+{attacker} sends a flock of geese after {target}!
+{attacker} stomps on {target} with giant boots!
+{attacker} unleashes a storm of chocolate on {target}!
+{attacker} performs a dramatic flip and kicks {target}!
+{attacker} swings a giant candy cane at {target}!
+{attacker} tickles {target} with a feather!
+{attacker} calls down a magical lightning chicken on {target}!
+{attacker} rolls a giant boulder toward {target}!
+{attacker} fires an ice shard at {target}!
+{attacker} hits {target} with a boomerang that comes back!
+{attacker} traps {target} in a bubble of magical energy!
+{attacker} swings their sword wildly, but misses {target} entirely!
+{attacker} casts a fireball, but it fizzles before reaching {target}!
+{attacker} lunges with a spear, only to trip and fall instead!
+{attacker} tries to summon a lightning strike, but it hits a nearby tree instead!
+{attacker} fires a magical arrow, but it harmlessly bounces off the ground!
+{attacker} swings their axe, but it gets stuck in the dirt!
+{attacker} casts a frost spell, but the magic backfires and freezes {attacker}’s feet!
+{attacker} attempts a critical strike, but {target} dodges gracefully!
+{attacker} hurls a fire orb, but it explodes midair harmlessly!
+{attacker} tries to summon a phantom blade, but it vanishes instantly!
+{attacker} spins for a whirlwind attack, but stumbles and loses balance!
+{attacker} fires a magic missile, but it fizzles before hitting {target}!
+{attacker} swings a greatsword, but the momentum throws them off balance!
+{attacker} attempts a dark curse, but it backfires slightly, weakening {attacker} instead!
+{attacker} launches a javelin, but it lands several feet away from {target}!
+{attacker} casts a meteor spell, but it lands harmlessly behind {target}!
+{attacker} strikes with a flurry of blows, but {target} ducks each one!
+{attacker} channels elemental fury, but the magic fizzles before impact!
+{attacker} summons a spectral dragon, but it disappears before attacking!
+{attacker} swings a katana, but it barely grazes the air!
+{attacker} attempts a binding spell, but {target} slips free immediately!
+{attacker} hurls a magical spear, but it bounces harmlessly off the ground!
+{attacker} swings their battle axe, but loses grip and drops it!
+{attacker} fires a chain lightning spell, but it arcs uselessly into the sky!
+{attacker} casts a freezing wave, but the ice melts before reaching {target}!
+{attacker} lunges with a sword, but {target} sidesteps easily!
+{attacker} attempts a spinning slash, but stumbles mid-motion!
+{attacker} conjures a firestorm, but it fizzles into harmless sparks!
+{attacker} swings a hammer, but {target} ducks just in time!
+{attacker} summons an elemental spirit, but it ignores the target entirely!
+{attacker} strikes {target} with a precise sword slash!
+{attacker} casts a blazing fireball toward {target}!
+{attacker} launches a piercing arrow at {target}’s chest!
+{attacker} summons a lightning strike on {target}!
+{attacker} channels dark energy to hit {target}!
+{attacker} swings a battle axe with devastating force at {target}!
+{attacker} casts a frost spell, freezing {target} in place!
+{attacker} lunges with a spear, aiming for {target}’s heart!
+{attacker} unleashes a whirlwind attack around {target}!
+{attacker} conjures a shadow blade to slice at {target}!
+{attacker} hurls a flaming spear at {target}!
+{attacker} strikes with a critical blow, aiming for {target}’s weak point!
+{attacker} casts a storm of magical missiles at {target}!
+{attacker} spins with a double-handed sword, striking {target}!
+{attacker} summons a spectral wolf to attack {target}!
+{attacker} releases a torrent of ice shards at {target}!
+{attacker} channels holy light to smite {target}!
+{attacker} performs a precise dagger strike at {target}’s flank!
+{attacker} swings a massive warhammer at {target}!
+{attacker} casts a shadow bolt, hitting {target} from afar!
+{attacker} lunges forward with a spear infused with lightning at {target}!
+{attacker} releases a firestorm around {target}!
+{attacker} casts a binding spell to immobilize {target}!
+{attacker} strikes {target} with a series of swift sword strikes!
+{attacker} fires a magical arrow that pierces through {target}’s defenses!
+{attacker} summons a phantom blade to slash at {target}!
+{attacker} channels elemental fury into a devastating strike on {target}!
+{attacker} spins with a glaive, hitting {target} with lethal precision!
+{attacker} casts a dark curse to weaken {target}’s defenses!
+{attacker} swings a katana with unmatched speed at {target}!
+{attacker} hurls a fire orb that explodes near {target}!
+{attacker} performs a precision strike aiming for {target}’s vital point!
+{attacker} summons an elemental spirit to attack {target}!
+{attacker} casts a chain lightning spell, hitting {target} with multiple bolts!
+{attacker} delivers a crushing blow with a mace at {target}!
+{attacker} channels wind magic to strike {target} with sharp gusts!
+{attacker} throws a javelin with deadly accuracy at {target}!
+{attacker} invokes a shadow storm to engulf {target}!
+{attacker} strikes with a flurry of sword strikes, leaving {target} reeling!
+{attacker} casts a meteor spell, raining destruction on {target}!
+{attacker} swings a greatsword with unparalleled force at {target}!
+{attacker} releases a volley of magic missiles, hitting {target} repeatedly!
+{attacker} channels arcane energy into a crushing strike on {target}!
+{attacker} lunges with a spear, piercing {target}’s armor!
+{attacker} performs a spinning slash, cutting across {target}’s defenses!
+{attacker} summons a spectral dragon to breathe fire on {target}!
+{attacker} casts a freezing wave, encasing {target} in ice!
+{attacker} strikes with precision, targeting {target}’s weak points!
+{attacker} swings a heavy battle axe, cleaving toward {target}!
+time stands still for a moment. something will happen
+time pauses for a moment. something will happen
+time ceases to exist for ??????? but then it....unceases?
+time is a thing
+time stands still for 2 moments
+a rift occurs. the battle is changing course.
+the end is nigh.
+talks cannot happen.
+one will die today. it is clear
+the winner will write history, and the loser will be forgotten.

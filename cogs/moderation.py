@@ -74,6 +74,13 @@ class Moderation(commands.Cog):
         await member.kick(reason=reason)
         await interaction.response.send_message(f"🔨 {member.mention} has been banned.\nReason: {reason}")
 
+    @app_commands.command(name='get-role-perms', description='returns permissions of role')
+    @app_commands.describe(role='the role to check')
+    async def get_role_perms(self, interaction: discord.Interaction, role: discord.Role):
+        embed = discord.Embed(title=f'Permissions for {role.name}', description=f'__**Permissions:**__ \n{role.permissions}\n\n**Position:** {role.position}')
+        await interaction.response.send_message(embed=embed)
+
+
 
 async def setup(bot):
     await bot.add_cog(Moderation(bot))
