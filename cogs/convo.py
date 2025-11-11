@@ -1,15 +1,14 @@
 import discord
+from discord.ext import commands
 from discord import app_commands
-from discord.ext import commands, voice_recv
 import asyncio
 import io
 import wave
 import whisper
 
-class AudioSink(voice_recv.BasicSink):
+class AudioSink:
     def __init__(self):
         self.finished = asyncio.Event()
-        super().__init__(self.finished)
         self.audio_buffer = b""
 
     def write(self, user, data):
@@ -30,6 +29,7 @@ class Convo(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.model = whisper.load_model("medium")
+        self.version = '0.3'
 
     @app_commands.command(name="convo", description="Start a voice convo and detect silence.")
     async def convo(self, interaction: discord.Interaction):
@@ -39,11 +39,13 @@ class Convo(commands.Cog):
 
         await interaction.response.defer(thinking=True)
         channel = user.voice.channel
-        vc = await channel.connect(cls=voice_recv.VoiceRecvClient)
+        # Make sure your voice library supports this connect
+        vc = await channel.connect(cls=discord.VoiceClient)  # replace with proper VC client
         sink = AudioSink()
-
         await interaction.followup.send("🎙️ Listening... start talking.")
-        vc.listen(sink)
+
+        # Hook to start listening
+        vc.listen(sink)  # ensure your VC client supports this
 
         silence_threshold = 3  # seconds
         last_audio_time = asyncio.get_event_loop().time()
@@ -61,11 +63,13 @@ class Convo(commands.Cog):
         await interaction.followup.send("🛑 You stopped speaking. Processing...")
 
         wav_data = sink.get_wav()
-        with open("user_audio.wav", "wb") as f:
+        filename = "user_audio.wav"
+        with open(filename, "wb") as f:
             f.write(wav_data)
 
         try:
-            result = self.model.transcribe("user_audio.wav")
+            # Run Whisper in a separate thread
+            result = await asyncio.to_thread(self.model.transcribe, filename)
             text = result["text"].strip()
             if text:
                 await interaction.followup.send(f"🗣️ Transcription: `{text}`")

@@ -1,0 +1,282 @@
+{
+    "convo": {
+        "Description": "Start a voice conversation and detect silence.",
+        "State": "Indev/Nonfunctional",
+        "Permissions": "None",
+        "Usage": "/convo",
+        "Parameters": "None",
+        "Category": "Voice"
+    },
+    "sync": {
+        "Description": "Sync slash commands to Discord (updates command tree).",
+        "State": "Functional",
+        "Permissions": "Bot Developer Access",
+        "Usage": "/sync",
+        "Parameters": "None",
+        "Category": "Development"
+    },
+    "reload": {
+        "Description": "Reload all bot cogs without restarting the bot.",
+        "State": "Functional",
+        "Permissions": "Bot Developer Access",
+        "Usage": "/reload",
+        "Parameters": "None",
+        "Category": "Development"
+    },
+    "reload_cog": {
+        "Description": "Reload a specific cog by name.",
+        "State": "Functional",
+        "Permissions": "Bot Developer Access",
+        "Usage": "/reload_cog <cog_name>",
+        "Parameters": "cog_name: The name of the cog to reload",
+        "Category": "Development"
+    },
+    "evil_command": {
+        "Description": "This is an evil command. Fear.",
+        "State": "Functional",
+        "Permissions": "Bot Owner",
+        "Usage": "/evil_command",
+        "Parameters": "None",
+        "Category": "Development"
+    },
+    "shutdown": {
+        "Description": "Shut down the bot safely.",
+        "State": "Functional",
+        "Permissions": "Bot Owner",
+        "Usage": "/shutdown",
+        "Parameters": "None",
+        "Category": "Development"
+    },
+    "edit_settings": {
+        "Description": "Edit global settings bot settings.",
+        "State": "Functional",
+        "Permissions": "Bot Developer Access",
+        "Usage": "/edit_settings <json>",
+        "Parameters": "json: the json to replace in settings.json",
+        "Category": "Development"
+    },
+    "settings-edit": {
+        "Description": "Edit a specific guild setting.",
+        "State": "Functional",
+        "Permissions": "Manage Server",
+        "Usage": "/settings-edit <setting>",
+        "Parameters": "setting: The setting to edit",
+        "Category": "Moderation"
+    },
+    "rate_limit_test": {
+        "Description": "Test bot rate limits to ensure proper handling.",
+        "State": "Indev",
+        "Permissions": "Bot Developer Access",
+        "Usage": "/rate_limit_test",
+        "Parameters": "None",
+        "Category": "Development"
+    },
+    "refresh": {
+        "Description": "Refresh all connected APIs or cached data.",
+        "State": "Functional",
+        "Permissions": "Bot Developer Access",
+        "Usage": "/refresh",
+        "Parameters": "None",
+        "Category": "Development"
+    },
+    "get_guilds": {
+        "Description": "Retrieve invite links and info for all guilds the bot is in.",
+        "State": "Functional",
+        "Permissions": "Bot Developer Access",
+        "Usage": "/get_guilds",
+        "Parameters": "None",
+        "Category": "Development"
+    },
+    "ship": {
+        "Description": "Ship two users because you are strange or read too much AO3.",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/ship <user1> <user2>",
+        "Parameters": "user1: First user, user2: Second user",
+        "Category": "Fun"
+    },
+    "best_match": {
+        "Description": "Find the best match in the server Modeld off of /ship.",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/best_match [user] (default None)",
+        "Parameters": "user: User to find the best paratner for (optional)",
+        "Category": "Fun"
+    },
+    "coin-flip": {
+        "Description": "Flip a coin.",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/coin-flip",
+        "Parameters": "None",
+        "Category": "Fun"
+    },
+    "roll-die": {
+        "Description": "Roll an n-sided dice.",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/roll-die <sides>",
+        "Parameters": "sides: Number of sides on the die (Default 6)",
+        "Category": "Fun"
+    },
+    "battle": {
+        "Description": "Initiate a battle between users.",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/battle <user1> <user2>",
+        "Parameters": "<user1>, <user2> Users to battle",
+        "Category": "Fun"
+    },
+    "create_entry": {
+        "Description": "Create a new journal entry for today.",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/create_entry <content>",
+        "Parameters": "content: Text for the journal entry",
+        "Category": "Journal"
+    },
+    "view_entry": {
+        "Description": "View your journal entry for a specific date.",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/view_entry <date>",
+        "Parameters": "date: The date of the entry (YYYY-MM-DD)",
+        "Category": "Journal"
+    },
+    "list_entries": {
+        "Description": "List all your journal entry dates.",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/list_entries",
+        "Parameters": "None",
+        "Category": "Journal"
+    },
+    "dungeon": {
+        "Description": "Single-player AI-driven dungeon adventure.",
+        "State": "Indev",
+        "Permissions": "None",
+        "Usage": "/dungeon [action]",
+        "Parameters": "action: start, continue, or end the adventure",
+        "Category": "Fun"
+    },
+    "ask": {
+        "Description": "Ask a question to the AI.",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/ask <question>",
+        "Parameters": "question: The question you want to ask",
+        "Category": "AI"
+    },
+    "speak": {
+        "Description": "Ask a question and get an audio response.",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/speak <question>",
+        "Parameters": "question: The question you want to ask",
+        "Category": "AI"
+    },
+    "study": {
+        "Description": "Study a subject with AI assistance.",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/study <subject>",
+        "Parameters": "subject: Topic or subject to study",
+        "Category": "AI"
+    },
+    "playradio": {
+        "Description": "Play a radio station by name.",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/playradio <station>",
+        "Parameters": "station: Name of the radio station",
+        "Category": "Music"
+    },
+    "playyt": {
+        "Description": "Add a YouTube song to the queue or start playing.",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/playyt <url_or_search>",
+        "Parameters": "url_or_search: YouTube URL or search query",
+        "Category": "Music"
+    },
+    "queue": {
+        "Description": "View the current music queue.",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/queue",
+        "Parameters": "None",
+        "Category": "Music"
+    },
+    "skip": {
+        "Description": "Skip the current song.",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/skip",
+        "Parameters": "None",
+        "Category": "Music"
+    },
+    "remove": {
+        "Description": "Remove a song from the queue by index.",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/remove <index>",
+        "Parameters": "index: Position of the song in the queue",
+        "Category": "Music"
+    },
+    "ping": {
+        "Description": "Check bot latency.",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/ping",
+        "Parameters": "None",
+        "Category": "Utility"
+    },
+    "join": {
+        "Description": "Join your voice channel.",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/join",
+        "Parameters": "None",
+        "Category": "Music"
+    },
+    "leave": {
+        "Description": "Leave the current voice channel.",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/leave",
+        "Parameters": "None",
+        "Category": "Music"
+    },
+    "stop": {
+        "Description": "Stop the current playback.",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/stop",
+        "Parameters": "None",
+        "Category": "Music"
+    },
+    "export_data": {
+        "Description": "Export all your data (this will NOT clear it).",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/export_data",
+        "Parameters": "None",
+        "Category": "Utility"
+    },
+    "decrypt": {
+        "Description": "Decrypt Data from the bot. The bot uses an undisclosed encryption algorithm.",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/decrypt <data>",
+        "Parameters": "data: Encrypted string to decrypt",
+        "Category": "Utility"
+    },
+    "help": {
+        "Description": "Show all bot commands.",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/help",
+        "Parameters": "None",
+        "Category": "Utility"
+    }
+}

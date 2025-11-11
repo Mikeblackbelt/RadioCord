@@ -1,0 +1,16 @@
+{
+    "1427325336831660245": {
+        "prefix": "!",
+        "language": "en",
+        "logging": true,
+        "modchannel": 1428092355856302102,
+        "welcome_channel": null
+    },
+    "963518234240368671": {
+        "prefix": "!",
+        "language": "en",
+        "logging": true,
+        "modchannel": null,
+        "welcome_channel": null
+    }
+}

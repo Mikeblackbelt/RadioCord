@@ -1,0 +1,22 @@
+{attacker} lands a final strike—{target} falls to the ground, defeated!
+{target} staggers and collapses, unable to continue the fight!
+{attacker} delivers a decisive blow—victory is theirs!
+{target} drops their weapon, conceding defeat to {attacker}!
+{attacker} overpowers {target} with a masterful attack—battle won!
+{target} is exhausted and can fight no more!
+{attacker} stands triumphant as {target} yields!
+{target} barely escapes, defeated and retreating!
+{attacker} lands a critical strike—{target} has been vanquished!
+{target} falls under {attacker}’s relentless assault!
+{attacker} delivers the final blow—the battle is over!
+{target} collapses, acknowledging {attacker}’s victory!
+{attacker} emerges victorious, standing over {target}’s fallen form!
+{target} is defeated, and silence falls over the battlefield!
+{attacker} strikes true, and {target} can fight no longer!
+{target} falters and falls, signaling the end of combat!
+{attacker} stands victorious. {target} yields completely!
+{target} succumbs to {attacker}’s overwhelming power!
+{attacker} finishes the fight with a decisive attack—victory!
+{target} is vanquished by a mysterious attack, marking the end of this battle!
+{attacker} cuts {target} down, breaks them apart, splays the gore of their profane form across the stars. 
+To the suprise of {attacker}, {target} mysteriously fades away.
