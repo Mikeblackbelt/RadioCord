@@ -30,7 +30,7 @@ class gs(commands.Cog):
         with open('cogs\\battleend.txt', 'r') as f:
             self.be = f.read().splitlines()
         self.sf = {0: 'anything is possible, except for this.', 6: 'anything is possible', 10: 'holy airball', 17: 'dont think about it too much', 24: 'could be worse, but not alot', 33: 'there may be a chance', 41: 'lowk not bad', 50: 'mayyybeee????', 57: 'would mkae a good fanfic', 63: 'i support', 67: 'mango mustard', 68: 'shoot your shot', 75: 'this is a free throw', 82: 'woah', 88: 'they look cute together', 94: 'soulmates ??? maybe ???', 99.4: 'just kiss already smh', 100: '<3 perfect match <3'}
-
+        self.defaultMatches = [[708384424537882716,749326115939680288]]
     def make_circle(self, im: Image.Image, size: int):
         im = im.resize((size, size))
         mask = Image.new("L", (size, size), 0)
@@ -42,8 +42,14 @@ class gs(commands.Cog):
 
     def calc_success(self, uid1: int, uid2: int) -> int:
         if sorted([uid1, uid2]) == sorted([1268762365566910619, 928109349140824125]):
-            return 100.00
-        return round(((uid1 * 67 ^ uid2 * 41) % 10000) / 100, 2)
+            return 100.00 
+        elif sorted([uid1, uid2]) in [sorted(match) for match in self.defaultMatches]:
+            return 99.999
+        if uid2 > uid1:
+            uid1, uid2 = uid2, uid1
+        if uid1 == uid2:
+            return (uid1 % 10000) / 100
+        return round(((uid1 * 67 ^ uid2 * 67) % 10000) / 100, 2)
 
     @app_commands.command(name='ship', description='ship two users because you are weird')
     @app_commands.describe(user1='user 1', user2='user2')
@@ -86,9 +92,12 @@ class gs(commands.Cog):
             if success >= i: flavor_text = self.sf[i]
             else: break
 
+        if success == 100 and 928109349140824125 not in [user1.id, user2.id]:
+            success = 99.9999 #ONLY I CAN AHIEVE PERFECTION
         embed = discord.Embed(
             title=f'Your ship: {user1.name[:len(user1.name)//2]}{user2.name[len(user2.name)//2:]}',
-            description=f'Chance of Success: {success}%'
+            description=f'Chance of Success: {success}%',
+            color= discord.Color.from_rgb(int(255 - success*2.55),int(success*2.55),50)
         )
         embed.set_image(url="attachment://love.png")
         embed.set_footer(text=f'{flavor_text} | try /{random.choice([command.name for command in self.get_app_commands()])}')
@@ -208,6 +217,7 @@ class gs(commands.Cog):
         embed = discord.Embed(
             title=f'Best match: {user1.name[:len(user1.name)//2]}{user2.name[len(user2.name)//2:]}',
             description=f'{mention_safe(user1, guild)} ❤️ {mention_safe(user2, guild)}\nChance of Success: {best_score}%',
+            color = discord.Color.from_rgb(int(255 - best_score*2.55),int(best_score*2.55),50)
         )
 
         flavor_text = ''
@@ -242,6 +252,32 @@ class gs(commands.Cog):
         await asyncio.sleep(2.67)
         embed = discord.Embed(title=f'You Rolled a {random.randint(1,n)}', description=f'good boy', color=discord.Color.from_rgb(127,210,121))
         await msg.edit(embed = embed)
+    
+    @app_commands.command(name='ship-concept', description='get a ship without expilicit users')
+    @app_commands.describe(ship1='first half of the ship name', ship2='second half of the ship name')
+    async def ship_concept(self, interaction: discord.Interaction, ship1: str, ship2: str):
+        await interaction.response.defer()
+        ship_name = ship1[:len(ship1)//2] + ship2[len(ship2)//2:]
+        flavortext = ''
+
+        if sorted([ship1, ship2]) == sorted(['mango', 'mustard']):
+            success = 67.00
+        elif sorted([ship1.lower(), ship2.lower()]) == sorted(['jasmine', 'michael']):
+            success = 100.00
+        else:
+            hash1 = sum(41*67*ord(c) for c in ship1)
+            hash2 = sum(41*67*ord(c) for c in ship2)
+            success = round(((hash1 * 67 ^ hash2 * 67) % 10000) / 100, 2)
+            for i in self.sf:
+                if success >= i: flavortext = self.sf[i]
+                else: break
+        embed = discord.Embed(
+            title=f'Your ship: {ship_name}',
+            description=f'Chance of Success: {success}%',
+            color = discord.Color.from_rgb(int(255 - success*2.55),int(success*2.55),50)
+        )
+        embed.set_footer(text=f'{flavortext} | try /{random.choice([command.name for command in self.get_app_commands()])}')
+        await interaction.followup.send(embed=embed)
 
     @app_commands.command(name='battle', description='we have love, now we have war')
     @app_commands.describe(user1='First user to fight', user2='Second user to fight')

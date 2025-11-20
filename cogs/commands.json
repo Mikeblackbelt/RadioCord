@@ -15,6 +15,30 @@
         "Parameters": "None",
         "Category": "Development"
     },
+    "high_low": {
+        "Description": "Play a game of High Low with the bot.",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/high_low",
+        "Parameters": "None",
+        "Category": "Fun"
+    },
+    "blackjack": {
+        "Description": "Play a game of Blackjack with the bot.",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/blackjack",
+        "Parameters": "None",
+        "Category": "Fun"
+    },
+    "ship-concept": {
+        "Description": "Ship two things, no mention required.",
+        "State": "Functional",
+        "Permissions": "None",
+        "Usage": "/ship-concept <concept1> <concept2>",
+        "Parameters": "concept1: First concept, concept2: Second concept",
+        "Category": "Fun"
+    },
     "reload": {
         "Description": "Reload all bot cogs without restarting the bot.",
         "State": "Functional",
@@ -193,7 +217,7 @@
     },
     "playyt": {
         "Description": "Add a YouTube song to the queue or start playing.",
-        "State": "Functional",
+        "State": "NOT Functional ( HELP ME)",
         "Permissions": "None",
         "Usage": "/playyt <url_or_search>",
         "Parameters": "url_or_search: YouTube URL or search query",

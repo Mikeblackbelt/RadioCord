@@ -1,3 +1,7 @@
+try:
+    import vrp #recieve audio patch 
+except Exception as e:
+    print("vrp module not installed, audio receiving patch will not be applied.\nError: ", e)
 import os
 import discord
 import asyncio
@@ -94,11 +98,12 @@ class MyBot(commands.Bot):
             color=discord.Color.green()
         )
         if datetime.datetime.now().month == 11 and datetime.datetime.now().day == 10:
-            jasmineEmbed = discord.Embed(title='are you an todays date', description='because you are an 11 out of 10', color=discord.Color.purple())
+            jasmineEmbed = discord.Embed(title='are you a todays date', description='because you are an 11 out of 10', color=discord.Color.purple())
             jasmineEmbed.set_footer(text='sorry...')
-            jasmine = discord.getUser(1268762365566910619)
-            jasmine.send(embed=jasmineEmbed)
-            print('message sent vro why did u do this :wilted-rose:')
+            jasmine = await self.fetch_user(1268762365566910619)
+        
+            await jasmine.send(embed=jasmineEmbed)
+            #print('message sent vro why did u do this :wilted-rose:')
 
 
         await update_channel.send(embed=embed)
@@ -128,7 +133,7 @@ class MyBot(commands.Bot):
         msg = f"Prefix command run: {ctx.command} by {ctx.author} in #{ctx.channel}"
         print(msg)
         logging.getLogger('command').info(msg)
-                                     
+                                     #why is there there i dont do prefix com
 
 async def main():
     bot = MyBot()

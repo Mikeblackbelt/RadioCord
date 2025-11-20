@@ -213,3 +213,5 @@ cogs/dev.py
 cogs/_learn.py
 discord.log
 *.mp3
+*.db
+*.json
